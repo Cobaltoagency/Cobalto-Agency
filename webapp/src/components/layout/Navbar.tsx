@@ -55,11 +55,12 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img
-              src="/assets/logo-cobalto.png"
-              alt="Cobalto"
-              className="h-10 md:h-12 w-auto"
-            />
+        <img
+          src={logo}
+          alt="Cobalto"
+          className="h-10 md:h-12 w-auto"
+          />
+
           </Link>
 
           {/* Desktop Navigation */}
