@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cobalto Design System - Modern, Professional, Trust-focused */
+
+@layer base {
+  :root {
+    /* Light mode - Clean, professional with cobalt accents */
+    --background: 210 25% 97%;
+    --foreground: 215 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 30% 12%;
+
+    /* Cobalt Blue - Primary brand color */
+    --primary: 214 84% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 93%;
+    --secondary-foreground: 215 30% 12%;
+
+    --muted: 210 15% 92%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent - Cyan/Teal from logo */
+    --accent: 190 90% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Orange accent from logo */
+    --highlight: 25 95% 55%;
+    --highlight-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 214 84% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 30% 12%;
+    --sidebar-primary: 214 84% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 93%;
+    --sidebar-accent-foreground: 215 30% 12%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 214 84% 45%;
+  }
+
+  .dark {
+    /* Dark mode - Sophisticated, deep cobalt */
+    --background: 220 25% 8%;
+    --foreground: 210 20% 96%;
+
+    --card: 220 25% 11%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 220 25% 11%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 214 84% 55%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 20% 16%;
+    --secondary-foreground: 210 20% 96%;
+
+    --muted: 220 20% 16%;
+    --muted-foreground: 210 15% 55%;
+
+    --accent: 190 85% 50%;
+    --accent-foreground: 220 25% 8%;
+
+    --highlight: 25 95% 55%;
+    --highlight-foreground: 220 25% 8%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 210 20% 96%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 214 84% 55%;
+
+    --sidebar-background: 220 25% 11%;
+    --sidebar-foreground: 210 20% 96%;
+    --sidebar-primary: 214 84% 55%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 20% 16%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 214 84% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
+  }
+
+  .glass {
+    @apply bg-white/80 dark:bg-card/80 backdrop-blur-xl;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
